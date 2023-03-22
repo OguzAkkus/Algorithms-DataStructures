@@ -4,15 +4,16 @@ const string = 'Hi My name is Oguzcan';
 
 function reverse1(str) {
 //check input
-if (!str || str.length < 2 || typeof str !== 'string') {
-  return 'that is not good!';
-}
+  if (!str || str.length < 2 || typeof str !== 'string') {
+    return 'that is not good!';
+  }
 
-const backwards = [];
-const totalItems = str.length - 1;
-for (let i = totalItems; i >= 0; i--) {
-  backwards.push(str[i]);
-}
+  const backwards = [];
+  const totalItems = str.length - 1;
+
+  for (let i = totalItems; i >= 0; i--) {
+    backwards.push(str[i]);
+  }
 
   return backwards.join('')
 }
@@ -26,8 +27,11 @@ const reverse4 = str => [...str].reverse().join('');
 
 
 console.log(
-reverse1(string),'\n',
-reverse2(string),'\n',
-reverse3(string),'\n',
+reverse1(string),
+'\n',
+reverse2(string),
+'\n',
+reverse3(string),
+'\n',
 reverse4(string)
 );
